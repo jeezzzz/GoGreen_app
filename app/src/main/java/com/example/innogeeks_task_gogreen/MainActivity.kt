@@ -10,9 +10,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val clickHereTextView = findViewById<TextView>(R.id.text5)
-
-        clickHereTextView.setOnClickListener(View.OnClickListener{
+        val createAccountButton=findViewById<TextView>(R.id.createAccountTextView)
+        createAccountButton.setOnClickListener({
             // Start the RegisterActivity when "Click here" is clicked
             val intent = Intent(this@MainActivity, register::class.java)
             startActivity(intent)
